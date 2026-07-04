@@ -231,4 +231,16 @@ terraform destroy
 
 ---
 
+## 7. Checklist frente al enunciado del profe
 
+- ✅ Variable `environment` con cambios reales en la infraestructura (tipo de instancia).
+- ✅ Uso de `.tfvars` y archivo `terraform.tfvars.example` en el repositorio.
+- ✅ Uso del módulo público `terraform-aws-modules/vpc/aws` para la red.
+- ✅ Uso del módulo público `terraform-aws-modules/s3-bucket/aws` para el backend S3.
+- ✅ Proyecto separado `s3-backend-bootstrap` para backend + DynamoDB.
+- ✅ ALB en subredes públicas, EC2 en subredes privadas.
+- ✅ Security Groups siguiendo mínimo privilegio (HTTP desde el ALB, SSH solo desde la IP del alumno).
+- ✅ Expresiones condicionales y funciones nativas (`format`, `merge`, `slice`, `trimspace`).
+- ✅ Gestión de código con estructura clara y README explicativo.
+
+Con este proyecto deberías cubrir todos los puntos técnicos que se revisan en la Actividad 2.1.
