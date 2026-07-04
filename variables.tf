@@ -56,5 +56,5 @@ variable "instance_type" {
 variable "bucket_name" {
   description = "Nombre del bucket S3 (globalmente único)"
   type        = string
-  default     = "auy1105-grupo3-proyecto2-datos"
+  default     = "auy1105-ep3-tapia-datos"
 }
