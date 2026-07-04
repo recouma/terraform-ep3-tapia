@@ -1,0 +1,2 @@
+Removed module.red.aws_security_group.this
+Successfully removed 1 resource instance(s).

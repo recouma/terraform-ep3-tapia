@@ -16,16 +16,6 @@ variable "public_subnets" {
   }))
 }
 
-variable "sg_ingress_rules" {
-  description = "Reglas de ingreso para el security group"
-  type = list(object({
-    description = string
-    from_port   = number
-    to_port     = number
-    protocol    = string
-    cidr_blocks = list(string)
-  }))
-}
 
 variable "common_tags" {
   description = "Tags comunes para todos los recursos"

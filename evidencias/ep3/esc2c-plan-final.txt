@@ -1,0 +1,18 @@
+[0m[1mmodule.computo.data.aws_ami.this: Reading...[0m[0m
+[0m[1mmodule.red.aws_vpc.this: Refreshing state... [id=vpc-0d34edd013a200e25][0m
+[0m[1mmodule.almacenamiento.aws_s3_bucket.this: Refreshing state... [id=auy1105-ep3-tapia-datos][0m
+[0m[1mmodule.computo.data.aws_ami.this: Read complete after 1s [id=ami-0d28727121d5d4a3c][0m
+[0m[1mmodule.red.aws_internet_gateway.this: Refreshing state... [id=igw-00140b3c081c9444f][0m
+[0m[1mmodule.red.aws_security_group.this: Refreshing state... [id=sg-0140f2ef1215b954d][0m
+[0m[1mmodule.red.aws_subnet.public[0]: Refreshing state... [id=subnet-05aaecebaeb6d2c83][0m
+[0m[1mmodule.red.aws_route_table.public: Refreshing state... [id=rtb-093ec6ee8979327d5][0m
+[0m[1mmodule.almacenamiento.aws_s3_bucket_versioning.this: Refreshing state... [id=auy1105-ep3-tapia-datos][0m
+[0m[1mmodule.almacenamiento.aws_s3_bucket_public_access_block.this: Refreshing state... [id=auy1105-ep3-tapia-datos][0m
+[0m[1mmodule.almacenamiento.aws_s3_bucket_server_side_encryption_configuration.this: Refreshing state... [id=auy1105-ep3-tapia-datos][0m
+[0m[1mmodule.computo.aws_instance.this: Refreshing state... [id=i-06977a5d8f82fc76e][0m
+[0m[1mmodule.red.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-0fc33bf2a2d7f23e4][0m
+
+[0m[1m[32mNo changes.[0m[1m Your infrastructure matches the configuration.[0m
+
+[0mTerraform has compared your real infrastructure against your configuration
+and found no differences, so no changes are needed.

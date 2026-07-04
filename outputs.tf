@@ -9,10 +9,6 @@ output "subnet_ids" {
   value       = module.red.subnet_ids
 }
 
-output "security_group_id" {
-  description = "ID del security group"
-  value       = module.red.security_group_id
-}
 
 # --- Cómputo ---
 output "instance_id" {

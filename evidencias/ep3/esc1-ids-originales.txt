@@ -1,0 +1,9 @@
+bucket_arn = "arn:aws:s3:::auy1105-ep3-tapia-datos"
+bucket_name = "auy1105-ep3-tapia-datos"
+instance_id = "i-02b010a462d9dd7b3"
+instance_ip = "3.239.212.202"
+security_group_id = "sg-0140f2ef1215b954d"
+subnet_ids = [
+  "subnet-05aaecebaeb6d2c83",
+]
+vpc_id = "vpc-0d34edd013a200e25"

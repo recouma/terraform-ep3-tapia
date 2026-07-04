@@ -1,0 +1,7 @@
+[31m[31m╷[0m[0m
+[31m│[0m [0m[1m[31mError: [0m[0m[1mResource instance is not tainted[0m
+[31m│[0m [0m
+[31m│[0m [0m[0mResource instance module.computo.aws_instance.this is not currently
+[31m│[0m [0mtainted, and so it cannot be untainted.
+[31m╵[0m[0m
+[0m[0m

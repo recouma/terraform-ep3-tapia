@@ -1,0 +1,72 @@
+[0m[1mmodule.computo.data.aws_ami.this: Reading...[0m[0m
+[0m[1mmodule.red.aws_vpc.this: Refreshing state... [id=vpc-0d34edd013a200e25][0m
+[0m[1mmodule.almacenamiento.aws_s3_bucket.this: Refreshing state... [id=auy1105-ep3-tapia-datos][0m
+[0m[1mmodule.computo.data.aws_ami.this: Read complete after 1s [id=ami-0d28727121d5d4a3c][0m
+[0m[1mmodule.red.aws_internet_gateway.this: Refreshing state... [id=igw-00140b3c081c9444f][0m
+[0m[1mmodule.red.aws_security_group.this: Refreshing state... [id=sg-0140f2ef1215b954d][0m
+[0m[1mmodule.red.aws_subnet.public[0]: Refreshing state... [id=subnet-05aaecebaeb6d2c83][0m
+[0m[1mmodule.red.aws_route_table.public: Refreshing state... [id=rtb-093ec6ee8979327d5][0m
+[0m[1mmodule.almacenamiento.aws_s3_bucket_public_access_block.this: Refreshing state... [id=auy1105-ep3-tapia-datos][0m
+[0m[1mmodule.almacenamiento.aws_s3_bucket_versioning.this: Refreshing state... [id=auy1105-ep3-tapia-datos][0m
+[0m[1mmodule.almacenamiento.aws_s3_bucket_server_side_encryption_configuration.this: Refreshing state... [id=auy1105-ep3-tapia-datos][0m
+[0m[1mmodule.computo.aws_instance.this: Refreshing state... [id=i-02b010a462d9dd7b3][0m
+[0m[1mmodule.red.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-0fc33bf2a2d7f23e4][0m
+
+[1m[36mNote:[0m[1m Objects have changed outside of Terraform
+[0m
+Terraform detected the following changes made outside of Terraform since the
+last "terraform apply" which may have affected this plan:
+
+[1m  # module.red.aws_security_group.this[0m has changed
+[0m  [33m~[0m[0m resource "aws_security_group" "this" {
+        id          = "sg-0140f2ef1215b954d"
+      [33m~[0m[0m ingress     = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m from_port        = 80
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 80
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+            [90m# (1 unchanged element hidden)[0m[0m
+        ]
+        name        = "AUY1105-proyecto2-sg-20260704153411853600000001"
+        tags        = {
+            "ManagedBy" = "Terraform"
+            "Name"      = "AUY1105-proyecto2-sg"
+            "Project"   = "AUY1105-proyecto2"
+        }
+        [90m# (7 unchanged attributes hidden)[0m[0m
+    }
+
+
+This is a refresh-only plan, so Terraform will not take any actions to undo
+these. If you were expecting these changes then you can apply this plan to
+record the updated values in the Terraform state without changing any remote
+objects.
+[0m[1m
+Would you like to update the Terraform state to reflect these detected changes?[0m
+  Terraform will write these changes to the state without modifying any real infrastructure.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  [1mEnter a value:[0m [0m
+[0m[1m[32m
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.[0m
+[0m[1m[32m
+Outputs:
+
+[0mbucket_arn = "arn:aws:s3:::auy1105-ep3-tapia-datos"
+bucket_name = "auy1105-ep3-tapia-datos"
+instance_id = "i-02b010a462d9dd7b3"
+instance_ip = "3.239.212.202"
+security_group_id = "sg-0140f2ef1215b954d"
+subnet_ids = [
+  "subnet-05aaecebaeb6d2c83",
+]
+vpc_id = "vpc-0d34edd013a200e25"

@@ -27,25 +27,6 @@ variable "public_subnets" {
   ]
 }
 
-variable "sg_ingress_rules" {
-  description = "Reglas de ingreso para el security group"
-  type = list(object({
-    description = string
-    from_port   = number
-    to_port     = number
-    protocol    = string
-    cidr_blocks = list(string)
-  }))
-  default = [
-    {
-      description = "SSH desde la VPC"
-      from_port   = 22
-      to_port     = 22
-      protocol    = "tcp"
-      cidr_blocks = ["10.1.0.0/16"]
-    }
-  ]
-}
 
 variable "instance_type" {
   description = "Tipo de instancia EC2"

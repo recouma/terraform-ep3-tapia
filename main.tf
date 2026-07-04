@@ -30,7 +30,6 @@ module "red" {
   vpc_cidr         = var.vpc_cidr
   project_name     = var.project_name
   public_subnets   = var.public_subnets
-  sg_ingress_rules = var.sg_ingress_rules
   common_tags      = local.common_tags
 }
 
@@ -42,7 +41,7 @@ module "computo" {
 
   instance_type      = var.instance_type
   subnet_id          = module.red.subnet_ids[0]
-  security_group_ids = [module.red.security_group_id]
+  security_group_ids = ["sg-0140f2ef1215b954d"]
   project_name       = var.project_name
   common_tags        = local.common_tags
 }

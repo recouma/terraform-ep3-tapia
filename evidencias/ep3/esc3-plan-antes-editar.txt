@@ -1,0 +1,97 @@
+[0m[1mmodule.computo.data.aws_ami.this: Reading...[0m[0m
+[0m[1mmodule.red.aws_vpc.this: Refreshing state... [id=vpc-0d34edd013a200e25][0m
+[0m[1mmodule.almacenamiento.aws_s3_bucket.this: Refreshing state... [id=auy1105-ep3-tapia-datos][0m
+[0m[1mmodule.computo.data.aws_ami.this: Read complete after 2s [id=ami-0d28727121d5d4a3c][0m
+[0m[1mmodule.red.aws_internet_gateway.this: Refreshing state... [id=igw-00140b3c081c9444f][0m
+[0m[1mmodule.red.aws_subnet.public[0]: Refreshing state... [id=subnet-05aaecebaeb6d2c83][0m
+[0m[1mmodule.red.aws_route_table.public: Refreshing state... [id=rtb-093ec6ee8979327d5][0m
+[0m[1mmodule.computo.aws_instance.this: Refreshing state... [id=i-06977a5d8f82fc76e][0m
+[0m[1mmodule.red.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-0fc33bf2a2d7f23e4][0m
+[0m[1mmodule.almacenamiento.aws_s3_bucket_versioning.this: Refreshing state... [id=auy1105-ep3-tapia-datos][0m
+[0m[1mmodule.almacenamiento.aws_s3_bucket_public_access_block.this: Refreshing state... [id=auy1105-ep3-tapia-datos][0m
+[0m[1mmodule.almacenamiento.aws_s3_bucket_server_side_encryption_configuration.this: Refreshing state... [id=auy1105-ep3-tapia-datos][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+  [33m~[0m update in-place[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.computo.aws_instance.this[0m will be updated in-place
+[0m  [33m~[0m[0m resource "aws_instance" "this" {
+        id                                   = "i-06977a5d8f82fc76e"
+        tags                                 = {
+            "ManagedBy" = "Terraform"
+            "Name"      = "AUY1105-proyecto2-ec2"
+            "Project"   = "AUY1105-proyecto2"
+        }
+      [33m~[0m[0m vpc_security_group_ids               = [
+          [31m-[0m[0m "sg-0140f2ef1215b954d",
+        ] -> (known after apply)
+        [90m# (38 unchanged attributes hidden)[0m[0m
+
+        [90m# (8 unchanged blocks hidden)[0m[0m
+    }
+
+[1m  # module.red.aws_security_group.this[0m will be created
+[0m  [32m+[0m[0m resource "aws_security_group" "this" {
+      [32m+[0m[0m arn                    = (known after apply)
+      [32m+[0m[0m description            = "Security group del proyecto AUY1105-proyecto2"
+      [32m+[0m[0m egress                 = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m from_port        = 0
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "-1"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 0
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ]
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m ingress                = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "10.1.0.0/16",
+                ]
+              [32m+[0m[0m description      = "SSH desde la VPC"
+              [32m+[0m[0m from_port        = 22
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 22
+            },
+        ]
+      [32m+[0m[0m name                   = (known after apply)
+      [32m+[0m[0m name_prefix            = "AUY1105-proyecto2-sg-"
+      [32m+[0m[0m owner_id               = (known after apply)
+      [32m+[0m[0m revoke_rules_on_delete = false
+      [32m+[0m[0m tags                   = {
+          [32m+[0m[0m "ManagedBy" = "Terraform"
+          [32m+[0m[0m "Name"      = "AUY1105-proyecto2-sg"
+          [32m+[0m[0m "Project"   = "AUY1105-proyecto2"
+        }
+      [32m+[0m[0m tags_all               = {
+          [32m+[0m[0m "ManagedBy" = "Terraform"
+          [32m+[0m[0m "Name"      = "AUY1105-proyecto2-sg"
+          [32m+[0m[0m "Project"   = "AUY1105-proyecto2"
+        }
+      [32m+[0m[0m vpc_id                 = "vpc-0d34edd013a200e25"
+    }
+
+[1mPlan:[0m [0m1 to add, 1 to change, 0 to destroy.
+
+Changes to Outputs:
+  [33m~[0m[0m security_group_id = "sg-0140f2ef1215b954d" -> (known after apply)
+[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
